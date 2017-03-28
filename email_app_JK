@@ -1,0 +1,187 @@
+<script>
+var appData = {
+	name: 'Gmail',
+	folders: ['Inbox','Starred','Sent Mail','Drafts','Barcelona','Concert','Email Tips','Ireland','Logins','Notes','TTS','Trash','Spam','All Mail','Chats'],
+	contacts: [
+		{name:'Amanda Darke', phone: '7708421457', email: 'amandaldarke@gmail.com'},
+		{name:'Holly Talbert', phone: '9122660663', email: 'hollytalbert@hotmail.com'},
+		{name:'Jim McDonald', phone: '7703809847', email: 'hcjim999@yahoo.com'},
+		{name:'Katie Jones', phone: '4043537656', email: 'katie.c.jones@gmail.com'}
+	],
+	chats: [
+			{
+				name:'Amanda Darke',
+				email:'amandaldarke@gmail.com',
+				lastMessage: {
+					received: '11:52 AM',
+					messageBody: 'I can\'t wait to meet up later!'
+				}
+			},
+			{
+				name:'Holly Talbert',
+				email:'hollytalbert@hotmail.com',
+				lastMessage: {
+					received: '1:52 PM',
+					messageBody: 'See ya soon!'
+				}
+			},
+			{	name:'Jim McDonald',
+				email:'hcjim999@yahoo.com',
+				lastMessage: {
+					received: '2:02 AM',
+					messageBody: 'Howdy!'
+				}
+			},
+			{	name:'Katie Jones',
+				email:'katie.c.jones@gmail.com',
+				lastMessage: {
+					received: '10:05 PM',
+					messageBody: 'See ya soon!'
+				}
+			}
+	],
+	emails: [
+			{
+				fromName:'Amanda Darke',
+				fromEmail:'amandaldarke@gmail.com',
+				subject: 'It\'s been a while',
+				timeSent: '10:00 AM',
+				body: 'When are we getting together?'
+			},
+			{
+				fromName:'Holly Talbert',
+				fromEmail:'hollytalbert@hotmail.com',
+				subject: 'Are you going?',
+				timeSent: '12:32 AM',
+				body: 'It will be on Monday. Are you going to go?'
+
+			},
+			{	fromName:'Jim McDonald',
+				fromEmail:'hcjim999@yahoo.com',
+				subject: 'Happy Birthday!',
+				timeSent: '4:00 OM',
+				body: 'Happy Birthday, buddy! Hope it was a great one!'
+			},
+			{	fromName:'Katie Jones',
+				fromEmail:'katie.c.jones@gmail.com',
+				subject: 'Moving Day',
+				timeSent: '10:35 PM',
+				body: 'I\'m moving next weekend. Can you help?'
+			}
+	],
+}
+</script>
+<html>
+	<head>
+		<title>TTS JS App Dev HW:2</title>
+	</head>
+	<body>
+		<ol>
+			<li><p>Create an object that models the data of your favorite email application.</p>
+				<pre>
+					var appData = {
+						name: 'Gmail',
+						folders: ['Inbox','Starred','Sent Mail','Drafts','Barcelona','Concert','Email Tips','Ireland','Logins','Notes','TTS','Trash','Spam','All Mail','Chats'],
+						contacts: [
+							{name:'Amanda Darke', phone: '7708421457', email: 'amandaldarke@gmail.com'},
+							{name:'Holly Talbert', phone: '9122660663', email: 'hollytalbert@hotmail.com'},
+							{name:'Jim McDonald', phone: '7703809847', email: 'hcjim999@yahoo.com'},
+							{name:'Katie Jones', phone: '4043537656', email: 'katie.c.jones@gmail.com'}
+						],
+						chats: [
+								{
+									name:'Amanda Darke',
+									email:'amandaldarke@gmail.com',
+									lastMessage: {
+										received: '11:52 AM',
+										messageBody: 'I can\'t wait to meet up later!'
+									}
+								},
+								{
+									name:'Holly Talbert',
+									email:'hollytalbert@hotmail.com',
+									lastMessage: {
+										received: '1:52 PM',
+										messageBody: 'See ya soon!'
+									}
+								},
+								{	name:'Jim McDonald',
+									email:'hcjim999@yahoo.com',
+									lastMessage: {
+										received: '2:02 AM',
+										messageBody: 'Howdy!'
+									}
+								},
+								{	name:'Katie Jones',
+									email:'katie.c.jones@gmail.com',
+									lastMessage: {
+										received: '10:05 PM',
+										messageBody: 'See ya soon!'
+									}
+								}
+						],
+						emails: [
+								{
+									fromName:'Amanda Darke',
+									fromEmail:'amandaldarke@gmail.com',
+									subject: 'It\'s been a while',
+									timeSent: '10:00 AM',
+									body: 'When are we getting together?'
+								},
+								{
+									fromName:'Holly Talbert',
+									fromEmail:'hollytalbert@hotmail.com',
+									subject: 'Are you going?',
+									timeSent: '12:32 AM',
+									body: 'It will be on Monday. Are you going to go?'
+
+								},
+								{	fromName:'Jim McDonald',
+									fromEmail:'hcjim999@yahoo.com',
+									subject: 'Happy Birthday!',
+									timeSent: '4:00 OM',
+									body: 'Happy Birthday, buddy! Hope it was a great one!'
+								},
+								{	fromName:'Katie Jones', 
+									fromEmail:'katie.c.jones@gmail.com',
+									subject: 'Moving Day',
+									timeSent: '10:35 PM',
+									body: 'I\'m moving next weekend. Can you help?'
+								}
+						],
+					}
+				</pre>
+			</li>
+			<li><p>Once you've composed your object, write some code to address it.</p>
+				<ul>
+					<li>
+						<p>Get a list of inbox names</p>
+						<pre>appData.folders
+							["Inbox", "Starred", "Sent Mail", "Drafts", "Barcelona", "Concert", "Email Tips", "Ireland", "Logins", "Notes", "TTS", "Trash", "Spam", "All Mail", "Chats"]
+						</pre>
+					</li>
+					<li>
+						<p>Get a list of emails</p>
+						<pre>
+						appData.emails
+						</pre>
+					</li>
+					<li>
+						<p>Get the text of the second email in the visible list</p>
+						<pre>
+						appData.emails[1].body
+						"It will be on Monday. Are you going to go?"</pre>
+					</li>
+					<li>
+						<p>Mark an email as sent</p>
+						<pre>appData.emails[2].sent = true;</pre>
+					</li>
+					<li>
+						<p>Add a draft email to the drafts mailbox</p>
+						<pre>appData.emails[0].folders = 'Drafts';</pre>
+					</li>
+				</ul>
+			</li>
+		</ol>
+	</body>
+</html>
